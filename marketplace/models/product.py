@@ -20,7 +20,7 @@ class Product(models.Model):
 
 
 class ProductDetail(models.Model):
-    product = models.OneToOneField(Category, on_delete=models.CASCADE, related_name='details')
+    product = models.OneToOneField(Product, on_delete=models.CASCADE, related_name='details')
     description = models.TextField(null=True, blank=True)
     manufacturing_date = models.DateField(null=True, blank=True)
     expiration_date = models.DateField(null=True, blank=True)
